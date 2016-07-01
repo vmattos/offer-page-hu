@@ -2,6 +2,8 @@ import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import OfferTitle from '../../components/OfferTitle/OfferTitle'
 
+import styles from './OfferDetailsPage.css';
+
 // Import Actions
 import { fetchOffer } from '../../OfferActions';
 
@@ -22,7 +24,7 @@ class OfferDetailsPage extends Component {
   render() {
     const offer = this.props.offer;
     return (
-      <div>
+      <div className={styles.container}>
       <OfferTitle
         originLocations={this.getOriginLocations().length}
         offer={offer}
