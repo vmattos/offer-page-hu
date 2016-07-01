@@ -12,7 +12,7 @@ import { getOffer } from '../../OfferReducer';
 
 class OfferDetailsPage extends Component {
   componentDidMount() {
-    //this.props.dispatch(fetchOffer(this.props.offer.id))
+    this.props.dispatch(fetchOffer(this.props.offer.id))
   }
 
   getOriginLocations() {
@@ -25,10 +25,10 @@ class OfferDetailsPage extends Component {
     const offer = this.props.offer;
     return (
       <div className={styles.container}>
-      <OfferTitle
-        originLocations={this.getOriginLocations().length}
-        offer={offer}
-      />
+        <OfferTitle
+          originLocations={this.getOriginLocations().length}
+          offer={offer}
+        />
       </div>
     );
   }
