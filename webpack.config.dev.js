@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var cssnext = require('postcss-cssnext');
 var postcssFocus = require('postcss-focus');
 var postcssReporter = require('postcss-reporter');
+var postcssNesting = require('postcss-nesting');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -80,5 +81,6 @@ module.exports = {
     postcssReporter({
       clearMessages: true,
     }),
+    postcssNesting(),
   ],
 };
