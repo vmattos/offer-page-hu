@@ -122,8 +122,8 @@
     "location": "Las Vegas, USA",
     "description": "Aéreo + Hotel",
     "photos": [
-      "images/photo6.jpg",
       "images/photo8.jpg",
+      "images/photo6.jpg",
       "images/photo9.jpg",
       "images/photo11.jpg",
       "images/photo3.jpg",
@@ -225,9 +225,9 @@
     "location": "Las Vegas, USA",
     "description": "Hotel com estilo oriental",
     "photos": [
+      "images/photo7.jpg",
       "images/photo6.jpg",
       "images/photo8.jpg",
-      "images/photo7.jpg",
       "images/photo9.jpg",
       "images/photo11.jpg",
       "images/photo3.jpg",
@@ -332,10 +332,10 @@
     "location": "Las Vegas, USA",
     "description": "Aéreo incluso",
     "photos": [
+      "images/photo9.jpg",
       "images/photo6.jpg",
       "images/photo8.jpg",
       "images/photo7.jpg",
-      "images/photo9.jpg",
       "images/photo11.jpg",
       "images/photo3.jpg",
       "images/photo2.jpg",
@@ -449,11 +449,11 @@
     "location": "Las Vegas, USA",
     "description": "Aéreo de várias cidades com Hotel em Las Vegas",
     "photos": [
+      "images/photo11.jpg",
       "images/photo6.jpg",
       "images/photo8.jpg",
       "images/photo7.jpg",
       "images/photo9.jpg",
-      "images/photo11.jpg",
       "images/photo3.jpg",
       "images/photo2.jpg",
       "images/photo1.jpg"
@@ -545,12 +545,12 @@
     "location": "Las Vegas, USA",
     "description": "Aéreo de várias cidades",
     "photos": [
+      "images/photo3.jpg",
       "images/photo6.jpg",
       "images/photo8.jpg",
       "images/photo7.jpg",
       "images/photo9.jpg",
       "images/photo11.jpg",
-      "images/photo3.jpg",
       "images/photo2.jpg",
       "images/photo1.jpg"
     ],
@@ -662,12 +662,12 @@
     "location": "Las Vegas, USA",
     "description": "Hotel em Vegas",
     "photos": [
+      "images/photo2.jpg",
       "images/photo6.jpg",
       "images/photo7.jpg",
       "images/photo9.jpg",
       "images/photo11.jpg",
-      "images/photo3.jpg",
-      "images/photo2.jpg"
+      "images/photo3.jpg"
     ],
     "options": [
       {
@@ -870,9 +870,9 @@
     "location": "Las Vegas, USA",
     "description": "Aéreo de várias cidades + Hotel em Vegas + Passeio",
     "photos": [
+      "images/photo7.jpg",
       "images/photo6.jpg",
       "images/photo8.jpg",
-      "images/photo7.jpg",
       "images/photo9.jpg",
       "images/photo11.jpg",
       "images/photo3.jpg",
@@ -977,10 +977,10 @@
     "location": "New York, NY",
     "description": "Aéreo + Hotel + Tour pela cidade mais movimentada do mundo",
     "photos": [
+      "images/photo2.jpg",
       "images/photo6.jpg",
       "images/photo7.jpg",
       "images/photo11.jpg",
-      "images/photo2.jpg",
       "images/photo1.jpg"
     ],
     "options": [
@@ -1046,9 +1046,9 @@
     "location": "New York, NY",
     "description": "Aéreo + Hotel + Tour + Carro alugado\n",
     "photos": [
+      "images/photo11.jpg",
       "images/photo6.jpg",
       "images/photo7.jpg",
-      "images/photo11.jpg",
       "images/photo2.jpg",
       "images/photo1.jpg"
     ],
@@ -1115,11 +1115,11 @@
     "location": "New York, NY",
     "description": "Aéreo + Hotel + Tour pela cidade mais movimentada do mundo",
     "photos": [
+      "images/photo1.jpg",
       "images/photo6.jpg",
       "images/photo7.jpg",
       "images/photo11.jpg",
-      "images/photo2.jpg",
-      "images/photo1.jpg"
+      "images/photo2.jpg"
     ],
     "options": [
       {
