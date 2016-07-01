@@ -10,13 +10,13 @@ function OfferList(props) {
   return (
     <div>
       <h1 className={styles.title}><FormattedMessage id="offerListTitle" /></h1>
-      <ul className={styles.offerList}>
+      <div className={styles.offerList}>
         {
           props.offers.map(offer => (
             <OfferListItem offer={offer} />
           ))
         }
-      </ul>
+      </div>
     </div>
   );
 }
