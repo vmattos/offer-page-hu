@@ -2,6 +2,7 @@ import callApi from '../../util/apiCaller';
 
 // Export Constants
 export const ADD_OFFERS = 'ADD_OFFERS';
+export const ADD_OFFER = 'ADD_OFFER'
 
 // Export Actions
 export function addOffers(offers) {
@@ -9,6 +10,13 @@ export function addOffers(offers) {
     type: ADD_OFFERS,
     offers,
   };
+}
+
+export function addOffer(offer) {
+  return {
+    type: ADD_OFFER,
+    offer
+  }
 }
 
 export function fetchOffers() {
