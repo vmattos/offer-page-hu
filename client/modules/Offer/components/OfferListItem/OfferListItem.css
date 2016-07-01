@@ -1,0 +1,122 @@
+:root {
+  --transition-time: 0.2s ease;
+}
+
+.offerListItem {
+  float: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 280px;
+  margin-bottom: 26px;
+  position: relative;
+  box-shadow: 0 0 10px black;
+  transition: var(--transition-time);
+}
+
+@media (width >= 730px) {
+  .offerListItem {
+    width: 45%;
+    margin-left: 3%;
+  }
+}
+
+@media (width >= 1020px) {
+  .offerListItem {
+    width: 31%;
+    margin-left: 2%;
+  }
+}
+
+.offerListItem:hover {
+  background-position: center -40px;
+  transition: var(--transition-time);
+
+  & .itemDescription {
+    transition: var(--transition-time);
+    height: 90px;
+
+    & h3 {
+      opacity: 1;
+      transition: 0.1s 0.1s;
+    }
+  }
+}
+
+.offerListItem[data-photo="images/photo1.jpg"] {
+    background-image: url('../../images/photo1.jpg');
+}
+
+.offerListItem[data-photo="images/photo2.jpg"] {
+    background-image: url('../../images/photo2.jpg');
+}
+
+.offerListItem[data-photo="images/photo3.jpg"] {
+    background-image: url('../../images/photo3.jpg');
+}
+
+.offerListItem[data-photo="images/photo4.jpg"] {
+    background-image: url('../../images/photo4.jpg');
+}
+
+.offerListItem[data-photo="images/photo5.jpg"] {
+    background-image: url('../../images/photo5.jpg');
+}
+
+.offerListItem[data-photo="images/photo6.jpg"] {
+    background-image: url('../../images/photo6.jpg');
+}
+
+.offerListItem[data-photo="images/photo7.jpg"] {
+    background-image: url('../../images/photo7.jpg');
+}
+
+.offerListItem[data-photo="images/photo8.jpg"] {
+    background-image: url('../../images/photo8.jpg');
+}
+
+.offerListItem[data-photo="images/photo9.jpg"] {
+    background-image: url('../../images/photo9.jpg');
+}
+
+.offerListItem[data-photo="images/photo10.jpg"] {
+    background-image: url('../../images/photo10.jpg');
+}
+
+.offerListItem[data-photo="images/photo11.jpg"] {
+    background-image: url('../../images/photo11.jpg');
+}
+
+.offerListItem[data-photo="images/photo12.jpg"] {
+    background-image: url('../../images/photo12.jpg');
+}
+
+
+.itemDescription {
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  transition: var(--transition-time);
+
+  & h2 {
+    font-size: 1.1em;
+    line-height: 50px;
+    padding-left: 10px;
+  }
+
+  & h3 {
+    display: inline-block;
+    font-size: 0.9em;
+    opacity: 0;
+    transition: 0.1s;
+    width: 50%;
+    padding-left: 10px;
+  }
+}
+
+.price {
+  text-align: center;
+}
