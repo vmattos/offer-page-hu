@@ -25,5 +25,8 @@ const OfferReducer = (state = initialState, action) => {
 // Get all offers
 export const getOffers = state => state.offers;
 
+// Get single offer
+export const getOffer = (state, id) => state.offers.find((s) => s.id == id);
+
 // Export Reducer
 export default OfferReducer;
