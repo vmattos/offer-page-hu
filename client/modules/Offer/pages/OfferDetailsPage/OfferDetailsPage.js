@@ -37,6 +37,7 @@ class OfferDetailsPage extends Component {
 
         <OfferOptions
           offer={offer}
+          originLocations={this.originLocations}
         />
       </div>
     );
