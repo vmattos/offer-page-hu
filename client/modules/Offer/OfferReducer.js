@@ -1,4 +1,4 @@
-import { ADD_OFFERS } from './OfferActions';
+import { ADD_OFFER, ADD_OFFERS } from './OfferActions';
 
 // Initial State
 const initialState = [];
@@ -8,6 +8,12 @@ const OfferReducer = (state = initialState, action) => {
 
     case ADD_OFFERS :
       return action.offers;
+
+    case ADD_OFFER :
+      return [
+        action.offer,
+        ...state,
+      ]
 
     default:
       return state;
