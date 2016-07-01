@@ -27,6 +27,10 @@ function OfferOptions(props) {
               </div>
 
               <div>
+                <p>{option.daily} diária{option.daily == 1 ? '' : 's'}</p>
+              </div>
+
+              <div>
                 <p>Por apenas:</p>
                 <p>R$ <span>{option.price}</span></p>
               </div>
