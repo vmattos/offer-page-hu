@@ -26,3 +26,13 @@ export function fetchOffers() {
     });
   };
 }
+
+export function fetchOffer(id) {
+  const endpoint = `offers/${id}`
+  return (dispatch) => {
+    return callApi(endpoint).then(res => {
+      console.log(res)
+      dispatch(addOffer(res));
+    });
+  }
+}
