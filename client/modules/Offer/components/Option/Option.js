@@ -1,14 +1,13 @@
 import React, { PropTypes, Component } from 'react';
 
+import OptionTitle from '../OptionTitle/OptionTitle';
+
 class Option extends Component {
   render() {
     const option = this.props.option;
     return (
       <div>
-        <div>
-          <h2>{option.title}</h2>
-          <h3>{option.description}</h3>
-        </div>
+        <OptionTitle option={option}/>
 
         <div>
           <h2>Saídas:</h2>
