@@ -12,6 +12,10 @@ import { fetchOffer } from '../../OfferActions';
 import { getOffer } from '../../OfferReducer';
 
 class OfferDetailsPage extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   componentWillMount() {
     this.originLocations = this.getOriginLocations();
   }
@@ -33,11 +37,13 @@ class OfferDetailsPage extends Component {
         <OfferTitle
           originLocations={this.originLocations.length}
           offer={offer}
+          {...this.props}
         />
 
         <OfferOptions
           offer={offer}
           originLocations={this.originLocations}
+          {...this.props}
         />
       </div>
     );

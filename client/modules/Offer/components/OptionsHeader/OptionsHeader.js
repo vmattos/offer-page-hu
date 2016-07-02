@@ -33,7 +33,7 @@ class OptionsHeader extends Component {
   }
 
   handleChange(value) {
-    console.log(this)
+
   }
 
   render() {
@@ -56,10 +56,7 @@ class OptionsHeader extends Component {
 OptionsHeader.propTypes = {
   offer: PropTypes.object.isRequired,
   originLocations: PropTypes.array.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
-
-OptionsHeader.contextTypes = {
-  dispatch: PropTypes.object.isRequired,
-}
 
 export default OptionsHeader;
