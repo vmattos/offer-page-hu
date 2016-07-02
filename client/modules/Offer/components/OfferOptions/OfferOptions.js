@@ -1,40 +1,15 @@
 import React, { PropTypes } from 'react';
 
-function getAvailableDailies(offer) {
-  return offer.options
-    .reduce((p, o) => [...p, o.daily], [])
-    .reduce((p, o) => p.indexOf(o) === -1 ? [...p, o] : p, [] );
-}
+import OptionsHeader from '../OptionsHeader/OptionsHeader';
+
 
 function OfferOptions(props) {
   const offer = props.offer;
-  const availableDailies = getAvailableDailies(offer);
 
   return (
     <div>
-      <div>
-        <h1>Escolha sua melhor opção</h1>
-        <div>
-          <p>Saídas:</p>
-          <select>
-            {
-              props.originLocations.map((location) => (
-                <option value={location}>{location}</option>
-              ))
-            }
-          </select>
-        </div>
-        <div>
-          <p>Nº de diárias::</p>
-          <select>
-            {
-              availableDailies.map((daily) => (
-                <option value={daily}>{daily}</option>
-              ))
-            }
-          </select>
-        </div>
-      </div>
+      <OptionsHeader {...props} />
+
       <div>
         {
           offer.options.map((option) => (
