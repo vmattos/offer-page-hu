@@ -1,5 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 
+import Option from '../Option/Option';
+
 class OptionsBody extends Component {
   render() {
     const offer = this.props.offer;
@@ -8,30 +10,7 @@ class OptionsBody extends Component {
       <div>
         {
           offer.options.map((option) => (
-            <div>
-              <div>
-                <h2>{option.title}</h2>
-                <h3>{option.description}</h3>
-              </div>
-
-              <div>
-                <h2>Saídas:</h2>
-                {
-                  option.from.map((origin) => (
-                    <p>{origin}</p>
-                  ))
-                }
-              </div>
-
-              <div>
-                <p>{option.daily} diária{option.daily == 1 ? '' : 's'}</p>
-              </div>
-
-              <div>
-                <p>Por apenas:</p>
-                <p>R$ <span>{option.price}</span></p>
-              </div>
-            </div>
+            <Option option={option} />
           ))
         }
       </div>
