@@ -17,10 +17,6 @@ class Option extends Component {
         <OptionDailies option={option}/>
 
         <OptionPrice option={option}/>
-        <div>
-          <p>Por apenas:</p>
-          <p>R$ <span>{option.price}</span></p>
-        </div>
       </div>
     );
   }
