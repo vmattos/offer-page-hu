@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 
 import OptionTitle from '../OptionTitle/OptionTitle';
+import OptionOrigins from '../OptionOrigins/OptionOrigins';
 
 class Option extends Component {
   render() {
@@ -9,14 +10,7 @@ class Option extends Component {
       <div>
         <OptionTitle option={option}/>
 
-        <div>
-          <h2>Saídas:</h2>
-          {
-            option.from.map((origin) => (
-              <p>{origin}</p>
-            ))
-          }
-        </div>
+        <OptionOrigins option={option}/>
 
         <div>
           <p>{option.daily} diária{option.daily == 1 ? '' : 's'}</p>
