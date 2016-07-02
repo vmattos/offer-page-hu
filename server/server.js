@@ -61,6 +61,7 @@ const renderFullPage = (html, initialState) => {
 
         ${process.env.NODE_ENV === 'production' ? `<link rel='stylesheet' href='${assetsManifest['/app.css']}' />` : ''}
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href="https://npmcdn.com/react-select/dist/react-select.css">
         <link rel="shortcut icon" href="http://cmastatic.hotelurbano.com/icons/favicon.ico" type="image/png" />
       </head>
       <body>
