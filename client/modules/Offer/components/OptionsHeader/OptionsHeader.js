@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+  import DropDown from '../DropDown/DropDown';
 
 class OptionsHeader extends Component {
   componentWillMount() {
@@ -17,23 +18,11 @@ class OptionsHeader extends Component {
         <h1>Escolha sua melhor opção</h1>
         <div>
           <p>Saídas:</p>
-          <select>
-            {
-              this.props.originLocations.map((location) => (
-                <option value={location}>{location}</option>
-              ))
-            }
-          </select>
+          <DropDown options={this.props.originLocations} />
         </div>
         <div>
           <p>Nº de diárias::</p>
-          <select>
-            {
-              this.availableDailies.map((daily) => (
-                <option value={daily}>{daily}</option>
-              ))
-            }
-          </select>
+          <DropDown options={this.availableDailies} />
         </div>
       </div>
     );
