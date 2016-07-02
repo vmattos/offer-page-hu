@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react';
 
 import OptionTitle from '../OptionTitle/OptionTitle';
 import OptionOrigins from '../OptionOrigins/OptionOrigins';
+import OptionDailies from '../OptionDailies/OptionDailies';
 
 class Option extends Component {
   render() {
@@ -12,9 +13,7 @@ class Option extends Component {
 
         <OptionOrigins option={option}/>
 
-        <div>
-          <p>{option.daily} diária{option.daily == 1 ? '' : 's'}</p>
-        </div>
+        <OptionDailies option={option}/>
 
         <div>
           <p>Por apenas:</p>
