@@ -8,10 +8,10 @@ class OptionOrigins extends Component {
 
     return (
       <div className={style.Section}>
-        <h2>Saídas:</h2>
+        <h2 className={style.Title}>Saídas:</h2>
         {
           option.from.map((origin) => (
-            <p>{origin}</p>
+            <p className={style.Origin}>{origin}</p>
           ))
         }
       </div>
