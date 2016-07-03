@@ -7,7 +7,7 @@ import styles from './OfferDetailsPage.css';
 
 // Import Actions
 import { fetchOffer } from '../../OfferActions';
-import { setOriginFilter } from '../../VisibilityActions';
+import { setOriginFilter, setDailyFilter } from '../../VisibilityActions';
 
 // Import Selectors
 import { getOffer } from '../../OfferReducer';
@@ -43,6 +43,10 @@ class OfferDetailsPage extends Component {
     this.dispatch(setOriginFilter(value));
   }
 
+  handleDailySelect(value) {
+    this.dispatch(setDailyFilter(value));
+  }
+
   render() {
     const offer = this.props.offer;
     return (
@@ -58,6 +62,7 @@ class OfferDetailsPage extends Component {
           originLocations={this.originLocations}
           availableDailies={this.availableDailies}
           handleOriginSelect={this.handleOriginSelect}
+          handleDailySelect={this.handleDailySelect}
           {...this.props}
         />
       </div>

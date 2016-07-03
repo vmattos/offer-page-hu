@@ -1,14 +1,22 @@
-import { SET_ORIGIN_FILTER } from './VisibilityActions'
+import { SET_ORIGIN_FILTER, SET_DAILY_FILTER } from './VisibilityActions'
 
 const initialState = {
   origin: "",
+  daily: "",
 };
 
 const VisibilityReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_ORIGIN_FILTER:
       return {
+        ...state,
         origin: action.filter,
+      }
+
+    case SET_DAILY_FILTER:
+      return {
+        ...state,
+        daily: action.filter,
       }
 
     default:

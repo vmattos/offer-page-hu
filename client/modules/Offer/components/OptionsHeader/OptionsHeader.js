@@ -33,7 +33,12 @@ class OptionsHeader extends Component {
         </div>
         <div>
           <p>Nº de diárias::</p>
-          <Select options={this.dailiesSelectOptions} value="" onChange={this.handleChange} dispatch={this.props.dispatch} />
+          <Select
+            options={this.dailiesSelectOptions}
+            value={this.props.visibility.daily}
+            dispatch={this.props.dispatch}
+            onChange={this.props.handleDailySelect}
+          />
         </div>
       </div>
     );
