@@ -39,6 +39,24 @@ class OfferDetailsPage extends Component {
     );
   }
 
+  getVisibleOptions(offer) {
+    return this.filterOptionsByDaily(
+      this.filterOptionsByOrigin(offer.options)
+    );
+  }
+
+  filterOptionsByOrigin(options) {
+    const origin = this.props.visibility.origin.value;
+    if (!origin || origin === "") return options;
+    return options.filter((o) => o.from.indexOf(origin) != -1);
+  }
+
+  filterOptionsByDaily(options) {
+    const daily = this.props.visibility.daily.value;
+    if (!daily || daily === "") return options;
+    return options.filter((o) => o.daily == daily);
+  }
+
   handleOriginSelect(value) {
     this.dispatch(setOriginFilter(value));
   }
@@ -63,6 +81,7 @@ class OfferDetailsPage extends Component {
           availableDailies={this.availableDailies}
           handleOriginSelect={this.handleOriginSelect}
           handleDailySelect={this.handleDailySelect}
+          visibleOptions={this.getVisibleOptions(this.props.offer)}
           {...this.props}
         />
       </div>

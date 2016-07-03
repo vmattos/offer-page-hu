@@ -9,7 +9,7 @@ class OptionsBody extends Component {
     return (
       <div>
         {
-          offer.options.map((option) => (
+          this.props.visibleOptions.map((option) => (
             <Option option={option} />
           ))
         }
@@ -20,6 +20,7 @@ class OptionsBody extends Component {
 
 OptionsBody.propTypes = {
   offer: PropTypes.object.isRequired,
+  visibleOptions: PropTypes.array.isRequired,
 };
 
 export default OptionsBody;
