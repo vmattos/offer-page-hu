@@ -5,11 +5,13 @@ import OptionOrigins from '../OptionOrigins/OptionOrigins';
 import OptionDailies from '../OptionDailies/OptionDailies';
 import OptionPrice from '../OptionPrice/OptionPrice';
 
+import style from '../Option/Option.css'
+
 class Option extends Component {
   render() {
     const option = this.props.option;
     return (
-      <div>
+      <div className={style.Option}>
         <OptionTitle option={option}/>
 
         <OptionOrigins option={option}/>
