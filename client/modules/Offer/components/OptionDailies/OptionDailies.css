@@ -5,3 +5,18 @@
   width: 15%;
   border-right: 1px solid #ccc;
 }
+
+span {
+  display: block;
+  text-align: center;
+}
+
+.Dailies {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.Description {
+  font-size: 0.7em;
+}
+
