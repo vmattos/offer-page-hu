@@ -1,0 +1,18 @@
+.Section {
+  vertical-align: top;
+  display: table-cell;
+  padding: 8px;
+  width: 60%;
+}
+
+.Title {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.Description {
+  color: #666;
+  font-size: 1em;
+  font-weight: initial;
+}
+
