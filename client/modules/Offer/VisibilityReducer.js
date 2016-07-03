@@ -9,7 +9,6 @@ const VisibilityReducer = (state = initialState, action) => {
     case SET_ORIGIN_FILTER:
       return {
         origin: action.filter,
-        ...state,
       }
 
     default:

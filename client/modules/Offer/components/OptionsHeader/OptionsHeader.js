@@ -8,32 +8,14 @@ class OptionsHeader extends Component {
 
   componentWillMount() {
     const availableOrigins = this.props.originLocations;
-    const availableDailies = this.getAvailableDailies(this.props.offer);
+    const availableDailies = this.props.availableDailies;
 
     this.originsSelectOptions = this.mountSelectOptions(availableOrigins);
     this.dailiesSelectOptions = this.mountSelectOptions(availableDailies);
   }
 
-  getAvailableDailies(offer) {
-    return this.getUniqueItems(
-      this.reduceDailies(offer)
-    );
-  }
-
-  reduceDailies(offer) {
-    return offer.options.reduce((p, o) => [...p, o.daily], []);
-  }
-
-  getUniqueItems(list) {
-    return list.reduce((p, o) => p.indexOf(o) === -1 ? [...p, o] : p, [] );
-  }
-
   mountSelectOptions(list) {
     return list.map((o) => {return {value: o, label: o}});
-  }
-
-  handleChange(value) {
-    this.dispatch(setVisibilityFilter(value));
   }
 
   render() {
@@ -42,7 +24,12 @@ class OptionsHeader extends Component {
         <h1>Escolha sua melhor opção</h1>
         <div>
           <p>Saídas:</p>
-          <Select options={this.originsSelectOptions} value="" dispatch={this.props.dispatch} />
+          <Select
+            options={this.originsSelectOptions}
+            value={this.props.visibility.origin}
+            dispatch={this.props.dispatch}
+            onChange={this.props.handleOriginSelect}
+          />
         </div>
         <div>
           <p>Nº de diárias::</p>
@@ -57,6 +44,7 @@ OptionsHeader.propTypes = {
   offer: PropTypes.object.isRequired,
   originLocations: PropTypes.array.isRequired,
   dispatch: PropTypes.func.isRequired,
+  visibility: PropTypes.object.isRequired,
 };
 
 export default OptionsHeader;

@@ -7,7 +7,7 @@ import styles from './OfferDetailsPage.css';
 
 // Import Actions
 import { fetchOffer } from '../../OfferActions';
-import { setVisibilityFilter } from '../../VisibilityActions';
+import { setOriginFilter } from '../../VisibilityActions';
 
 // Import Selectors
 import { getOffer } from '../../OfferReducer';
@@ -19,17 +19,28 @@ class OfferDetailsPage extends Component {
   }
 
   componentWillMount() {
-    this.originLocations = this.getOriginLocations();
+    this.originLocations = this.getOriginLocations(this.props.offer);
+    this.availableDailies = this.getAvailableDailies(this.props.offer);
   }
 
   componentDidMount() {
     this.props.dispatch(fetchOffer(this.props.offer.id))
   }
 
-  getOriginLocations() {
-    return this.props.offer.options
-      .reduce((p, o) => [...p, ...o.from], [])
-      .reduce((p, o) => p.indexOf(o) === -1 ? [...p, o] : p, [] );
+  getOriginLocations(offer) {
+    return this.getUniqueItems(
+      this.reduceOrigins(offer)
+    );
+  }
+
+  getAvailableDailies(offer) {
+    return this.getUniqueItems(
+      this.reduceDailies(offer)
+    );
+  }
+
+  handleOriginSelect(value) {
+    this.dispatch(setOriginFilter(value));
   }
 
   render() {
@@ -45,10 +56,25 @@ class OfferDetailsPage extends Component {
         <OfferOptions
           offer={offer}
           originLocations={this.originLocations}
+          availableDailies={this.availableDailies}
+          handleOriginSelect={this.handleOriginSelect}
           {...this.props}
         />
       </div>
     );
+  }
+
+  // Helper functions
+  reduceDailies(offer) {
+    return offer.options.reduce((p, o) => [...p, o.daily], []);
+  }
+
+  reduceOrigins(offer) {
+    return offer.options.reduce((p, o) => [...p, ...o.from], []);
+  }
+
+  getUniqueItems(list) {
+    return list.reduce((p, o) => p.indexOf(o) === -1 ? [...p, o] : p, [] );
   }
 }
 
