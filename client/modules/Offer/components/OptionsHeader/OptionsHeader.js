@@ -33,7 +33,7 @@ class OptionsHeader extends Component {
   }
 
   handleChange(value) {
-
+    this.dispatch(setVisibilityFilter(value));
   }
 
   render() {

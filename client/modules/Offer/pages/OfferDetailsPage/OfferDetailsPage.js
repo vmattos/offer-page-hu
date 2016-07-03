@@ -7,9 +7,11 @@ import styles from './OfferDetailsPage.css';
 
 // Import Actions
 import { fetchOffer } from '../../OfferActions';
+import { setVisibilityFilter } from '../../VisibilityActions';
 
 // Import Selectors
 import { getOffer } from '../../OfferReducer';
+import { getVisibility } from '../../VisibilityReducer';
 
 class OfferDetailsPage extends Component {
   constructor(props) {
@@ -59,6 +61,7 @@ OfferDetailsPage.need = [params => {
 function mapStateToProps(state, props) {
   return {
     offer: getOffer(state, props.params.id),
+    visibility: getVisibility(state),
   };
 }
 

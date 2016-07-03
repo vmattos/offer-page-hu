@@ -35,3 +35,4 @@ export function fetchOffer(id) {
     });
   }
 }
+
