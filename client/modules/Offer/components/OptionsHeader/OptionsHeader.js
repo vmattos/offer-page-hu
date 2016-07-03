@@ -1,6 +1,8 @@
 import React, { PropTypes, Component } from 'react';
 import Select from 'react-select';
 
+import style from './OptionsHeader.css';
+
 class OptionsHeader extends Component {
   constructor(props) {
     super(props);
@@ -20,20 +22,22 @@ class OptionsHeader extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Escolha sua melhor opção</h1>
-        <div>
+      <div className={style.Header}>
+        <h1 className={style.Title}>Escolha sua melhor opção</h1>
+        <div className={style.OriginSelector}>
           <p>Saídas:</p>
           <Select
+            className={style.Select}
             options={this.originsSelectOptions}
             value={this.props.visibility.origin}
             dispatch={this.props.dispatch}
             onChange={this.props.handleOriginSelect}
           />
         </div>
-        <div>
+        <div className={style.DailySelector}>
           <p>Nº de diárias::</p>
           <Select
+            className={style.Select}
             options={this.dailiesSelectOptions}
             value={this.props.visibility.daily}
             dispatch={this.props.dispatch}
