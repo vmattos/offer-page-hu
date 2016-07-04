@@ -1,18 +1,16 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes } from 'react';
 
 import style from './OptionTitle.css';
 
-class OptionTitle extends Component {
-  render() {
-    const option = this.props.option;
+function OptionTitle(props) {
+  const option = props.option;
 
-    return (
-      <div className={style.Section}>
-        <h2 className={style.Title}>{option.title}</h2>
-        <h3 className={style.Description}>{option.description}</h3>
-      </div>
-    );
-  }
+  return (
+    <div className={style.Section}>
+      <h2 className={style.Title}>{option.title}</h2>
+      <h3 className={style.Description}>{option.description}</h3>
+    </div>
+  );
 }
 
 OptionTitle.propTypes = {
