@@ -65,9 +65,13 @@ class OfferDetailsPage extends Component {
   }
 
   filterOptionsByDaily(options) {
-    const daily = this.props.visibility.daily.value;
-    if (!daily || daily === '') return options;
-    return options.filter((o) => parseInt(o.daily, 10) === daily);
+    try {
+      const daily = this.props.visibility.daily.value;
+      if (!daily || daily === '') return options;
+      return options.filter((o) => parseInt(o.daily, 10) === daily);
+    } catch(e) {
+      return options
+    }
   }
 
   filterOptionsByOrigin(options) {
