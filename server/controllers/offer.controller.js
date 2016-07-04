@@ -5,11 +5,11 @@ export function getOffers(req, res) {
 }
 
 export function getOffer(req, res) {
-  const id = parseInt(req.params.id);
+  const id = parseInt(req.params.id, 10);
   const offer = mock.find((o) => o.id === id);
   if (!offer) {
     const errorMsg = `Offer with id ${id} not found`;
-    return res.status(500).send({error: errorMsg});
+    return res.status(500).send({ error: errorMsg });
   }
 
   return res.json(offer);

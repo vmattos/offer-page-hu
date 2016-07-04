@@ -13,7 +13,7 @@ const OfferReducer = (state = initialState, action) => {
       return [
         action.offer,
         ...state,
-      ]
+      ];
 
     default:
       return state;
@@ -26,7 +26,7 @@ const OfferReducer = (state = initialState, action) => {
 export const getOffers = state => state.offers;
 
 // Get single offer
-export const getOffer = (state, id) => state.offers.find((s) => s.id == id);
+export const getOffer = (state, id) => state.offers.find((s) => s.id === parseInt(id, 10));
 
 // Export Reducer
 export default OfferReducer;

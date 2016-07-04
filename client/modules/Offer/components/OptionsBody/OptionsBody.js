@@ -1,21 +1,17 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes } from 'react';
 
 import Option from '../Option/Option';
 
-class OptionsBody extends Component {
-  render() {
-    const offer = this.props.offer;
-
-    return (
-      <div>
-        {
-          this.props.visibleOptions.map((option) => (
-            <Option option={option} />
-          ))
-        }
-      </div>
-    );
-  }
+function OptionsBody(props) {
+  return (
+    <div>
+      {
+        props.visibleOptions.map((option) => (
+          <Option option={option} />
+        ))
+      }
+    </div>
+  );
 }
 
 OptionsBody.propTypes = {

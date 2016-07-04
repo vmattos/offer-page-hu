@@ -4,8 +4,8 @@ import style from './OfferTitle.css';
 
 function OfferTitle(props) {
   const offer = props.offer;
-  const originLocations = `Aéreo de ${props.originLocations} cidade${props.originLocations == 1 ? ' ' : 's' }`;
-  const location = `Hotel em ${offer.location}`
+  const originLocations = `Aéreo de ${props.originLocations} cidade${parseInt(props.originLocations, 10) === 1 ? ' ' : 's'}`;
+  const location = `Hotel em ${offer.location}`;
 
   return (
     <div className={style.title}>
@@ -17,13 +17,14 @@ function OfferTitle(props) {
         +
         {' '}
         {location}
-        </h3>
+      </h3>
     </div>
   );
 }
 
 OfferTitle.propTypes = {
   originLocations: PropTypes.number.isRequired,
+  offer: PropTypes.object.isRequired,
 };
 
 export default OfferTitle;

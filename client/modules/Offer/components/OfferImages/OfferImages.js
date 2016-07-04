@@ -4,16 +4,12 @@ import ImageGallery from 'react-image-gallery';
 import style from './OfferImages.css';
 
 class OfferImages extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentWillMount() {
-    this.images = this.mountGallery(this.props.images);
+    this.images = this.mountGallery(this.props.images); // eslint-disable-line
   }
 
   mountGallery(images) {
-    return images.map((i) => { return {original: i, thumbnail: i}})
+    return images.map((i) => { return { original: i, thumbnail: i }; });
   }
 
   render() {
@@ -29,6 +25,7 @@ class OfferImages extends Component {
 }
 
 OfferImages.PropTypes = {
-}
+  images: PropTypes.array.isRequired,
+};
 
 export default OfferImages;
