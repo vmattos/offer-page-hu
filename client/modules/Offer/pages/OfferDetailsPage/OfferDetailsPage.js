@@ -71,9 +71,13 @@ class OfferDetailsPage extends Component {
   }
 
   filterOptionsByOrigin(options) {
-    const origin = this.props.visibility.origin.value;
-    if (!origin || origin === '') return options;
-    return options.filter((o) => parseInt(o.from.indexOf(origin), 10) !== -1);
+    try {
+      const origin = this.props.visibility.origin.value;
+      if (!origin || origin === '') return options;
+      return options.filter((o) => parseInt(o.from.indexOf(origin), 10) !== -1);
+    } catch(e) {
+      return options;
+    }
   }
 
   loadImages(photos) {
