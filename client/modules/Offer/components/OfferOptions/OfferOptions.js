@@ -3,12 +3,12 @@ import React, { PropTypes } from 'react';
 import OptionsHeader from '../OptionsHeader/OptionsHeader';
 import OptionsBody from '../OptionsBody/OptionsBody';
 
-function OfferOptions() {
+function OfferOptions(props) {
   return (
     <div>
-      <OptionsHeader {...this.props} />
+      <OptionsHeader {...props} />
 
-      <OptionsBody {...this.props} />
+      <OptionsBody {...props} />
     </div>
   );
 }

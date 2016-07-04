@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react';
 
 import style from './OptionOrigins.css';
 
-function OptionOrigins() {
-  const option = this.props.option;
+function OptionOrigins(props) {
+  const option = props.option;
 
   return (
     <div className={style.Section}>

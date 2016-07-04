@@ -7,8 +7,8 @@ import OptionPrice from '../OptionPrice/OptionPrice';
 
 import style from '../Option/Option.css';
 
-function Option() {
-  const option = this.props.option;
+function Option(props) {
+  const option = props.option;
   return (
     <div className={style.Option}>
       <OptionTitle option={option} />
