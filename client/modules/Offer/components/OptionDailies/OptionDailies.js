@@ -1,25 +1,21 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes } from 'react';
 
-import style from './OptionDailies.css'
+import style from './OptionDailies.css';
 
-class OptionDailies extends Component {
-  render() {
-    const option = this.props.option;
+function OptionDailies(props) {
+  const option = props.option;
 
-    const glyphClasses = 'glyphicon glyphicon-calendar';
-
-    return (
-      <div className={style.Section}>
-        <p>
-          <span className={style.Dailies}>{option.daily}</span>
-          {' '}
-          <span className={style.Description}>
-            Diária{option.daily == 1 ? '' : 's'}
-          </span>
-        </p>
-      </div>
-    );
-  }
+  return (
+    <div className={style.Section}>
+      <p>
+        <span className={style.Dailies}>{option.daily}</span>
+        {' '}
+        <span className={style.Description}>
+          Diária{parseInt(option.daily, 10) === 1 ? '' : 's'}
+        </span>
+      </p>
+    </div>
+  );
 }
 
 OptionDailies.propTypes = {
