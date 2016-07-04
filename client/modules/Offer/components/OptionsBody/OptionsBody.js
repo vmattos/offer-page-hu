@@ -7,7 +7,7 @@ function OptionsBody(props) {
     <div>
       {
         props.visibleOptions.map((option) => (
-          <Option option={option} />
+          <Option key={option.id} option={option} />
         ))
       }
     </div>

@@ -10,7 +10,7 @@ function OptionOrigins(props) {
       <h2 className={style.Title}>Saídas:</h2>
       {
         option.from.map((origin) => (
-          <p className={style.Origin}>{origin}</p>
+          <p key={origin} className={style.Origin}>{origin}</p>
         ))
       }
     </div>
