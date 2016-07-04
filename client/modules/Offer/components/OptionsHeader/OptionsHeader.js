@@ -4,10 +4,6 @@ import Select from 'react-select';
 import style from './OptionsHeader.css';
 
 class OptionsHeader extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentWillMount() {
     const availableOrigins = this.props.originLocations;
     const availableDailies = this.props.availableDailies;
@@ -17,7 +13,7 @@ class OptionsHeader extends Component {
   }
 
   mountSelectOptions(list) {
-    return list.map((o) => {return {value: o, label: o}});
+    return list.map((o) => { return { value: o, label: o }; });
   }
 
   render() {
@@ -52,8 +48,11 @@ class OptionsHeader extends Component {
 OptionsHeader.propTypes = {
   offer: PropTypes.object.isRequired,
   originLocations: PropTypes.array.isRequired,
+  availableDailies: PropTypes.array.isRequired,
   dispatch: PropTypes.func.isRequired,
   visibility: PropTypes.object.isRequired,
+  handleDailySelect: PropTypes.func.isRequired,
+  handleOriginSelect: PropTypes.func.isRequired,
 };
 
 export default OptionsHeader;
