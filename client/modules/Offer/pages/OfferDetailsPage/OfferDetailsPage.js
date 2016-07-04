@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import OfferTitle from '../../components/OfferTitle/OfferTitle'
 import OfferOptions from '../../components/OfferOptions/OfferOptions'
+import OfferImages from '../../components/OfferImages/OfferImages'
 
 import styles from './OfferDetailsPage.css';
 
@@ -21,10 +22,23 @@ class OfferDetailsPage extends Component {
   componentWillMount() {
     this.originLocations = this.getOriginLocations(this.props.offer);
     this.availableDailies = this.getAvailableDailies(this.props.offer);
+    this.images = this.loadImages(this.props.offer.photos);
   }
 
   componentDidMount() {
     this.props.dispatch(fetchOffer(this.props.offer.id))
+  }
+
+  loadImages(photos) {
+    // Webpack has a that forbids us to use require inside .map() :(
+    if (typeof window !== 'undefined') {
+      const urlList = [];
+      for (let i = 0; i < photos.length; i++) {
+        urlList.push(require(`../../${photos[i]}`));
+      }
+      return urlList;
+    }
+    return [];
   }
 
   getOriginLocations(offer) {
@@ -72,6 +86,11 @@ class OfferDetailsPage extends Component {
         <OfferTitle
           originLocations={this.originLocations.length}
           offer={offer}
+          {...this.props}
+        />
+
+        <OfferImages
+          images={this.images}
           {...this.props}
         />
 
