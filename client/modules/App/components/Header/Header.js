@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router';
 
 // Import Style
 import styles from './Header.css';
@@ -10,7 +11,7 @@ export function Header(props, context) { // eslint-disable-line
   );
 
   return (
-    <div className={styles.header}>
+    <Link className={styles.header} to="/">
       <div className={styles['language-switcher']}>
         <ul>
           <li><FormattedMessage id="switchLanguage" /></li>
@@ -25,7 +26,7 @@ export function Header(props, context) { // eslint-disable-line
           <FormattedMessage id="subtitle" />
         </h3>
       </div>
-    </div>
+    </Link>
   );
 }
 

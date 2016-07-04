@@ -3,6 +3,7 @@
   background-size: cover;
   border-bottom: 1px solid #ccc;
   min-height: 200px;
+  display: block;
 }
 
 .language-switcher {
