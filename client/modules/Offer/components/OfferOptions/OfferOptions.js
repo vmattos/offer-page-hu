@@ -1,22 +1,16 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes } from 'react';
 
 import OptionsHeader from '../OptionsHeader/OptionsHeader';
 import OptionsBody from '../OptionsBody/OptionsBody';
 
-class OfferOptions extends Component {
-  constructor(props) {
-    super(props);
-  }
+function OfferOptions() {
+  return (
+    <div>
+      <OptionsHeader {...this.props} />
 
-  render() {
-    return (
-      <div>
-        <OptionsHeader {...this.props} />
-
-        <OptionsBody {...this.props} />
-      </div>
-    );
-  }
+      <OptionsBody {...this.props} />
+    </div>
+  );
 }
 
 OfferOptions.propTypes = {
