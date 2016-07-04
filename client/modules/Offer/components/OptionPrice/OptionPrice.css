@@ -1,0 +1,42 @@
+.Section {
+  vertical-align: top;
+  display: table-cell;
+  padding: 8px;
+  text-align: center;
+  width: 20%;
+
+  & p {
+    text-align: center;
+    width: 100%;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 12px;
+
+    & > span {
+      display: block;
+      font-size: 1em;
+    }
+
+    & span {
+      color: #222;
+      font-weight: bold;
+    }
+  }
+}
+
+.Price {
+  font-size: 1.9em;
+}
+
+.Confirm {
+  text-transform: uppercase;
+  background-color: orange;
+  color: white;
+  border: none;
+  font-size: 0.9em;
+  padding: 4px 20px;
+}
+
+.Confirm:hover {
+  cursor: pointer;
+}

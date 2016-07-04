@@ -22,5 +22,5 @@ test('renders the header properly', t => {
     }
   );
 
-  t.truthy(wrapper.find('Link').first().containsMatchingElement(<FormattedMessage id="siteTitle" />));
+  t.truthy(wrapper.find('h1').first().containsMatchingElement(<FormattedMessage id="siteTitle" />));
 });

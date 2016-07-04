@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
 import { FormattedMessage } from 'react-intl';
 
 // Import Style
@@ -19,14 +18,12 @@ export function Header(props, context) { // eslint-disable-line
         </ul>
       </div>
       <div className={styles.content}>
-        <Link to="/" >
-          <h1 className={styles['site-title']}>
-            <FormattedMessage id="siteTitle" />
-          </h1>
-          <h3 className={styles['site-subtitle']}>
-            <FormattedMessage id="subtitle" />
-          </h3>
-        </Link>
+        <h1 className={styles['site-title']}>
+          <FormattedMessage id="siteTitle" />
+        </h1>
+        <h3 className={styles['site-subtitle']}>
+          <FormattedMessage id="subtitle" />
+        </h3>
       </div>
     </div>
   );

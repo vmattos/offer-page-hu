@@ -1,0 +1,8 @@
+.Option {
+  border: 1px solid #bbb;
+  margin-bottom: 20px;
+}
+
+.Option:hover {
+  border-color: orange;
+}

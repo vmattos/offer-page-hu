@@ -1,0 +1,17 @@
+:root{
+  --secondary-color: #656565;
+}
+
+.title {
+
+  & h2 {
+    font-size: 1em;
+    color: var(--secondary-color);
+  }
+
+  & h3 {
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    font-weight: initial;
+  }
+}
