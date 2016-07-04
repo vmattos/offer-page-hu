@@ -1,0 +1,17 @@
+.Section {
+  vertical-align: top;
+  display: table-cell;
+  padding: 8px;
+  width: 15%;
+  border-right: 1px solid #ccc;
+}
+
+.Title {
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.Origin {
+  color: #666;
+  font-size: 0.9em;
+}
