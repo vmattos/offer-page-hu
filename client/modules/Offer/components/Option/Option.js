@@ -1,27 +1,25 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes } from 'react';
 
 import OptionTitle from '../OptionTitle/OptionTitle';
 import OptionOrigins from '../OptionOrigins/OptionOrigins';
 import OptionDailies from '../OptionDailies/OptionDailies';
 import OptionPrice from '../OptionPrice/OptionPrice';
 
-import style from '../Option/Option.css'
+import style from '../Option/Option.css';
 
-class Option extends Component {
-  render() {
-    const option = this.props.option;
-    return (
-      <div className={style.Option}>
-        <OptionTitle option={option}/>
+function Option() {
+  const option = this.props.option;
+  return (
+    <div className={style.Option}>
+      <OptionTitle option={option} />
 
-        <OptionOrigins option={option}/>
+      <OptionOrigins option={option} />
 
-        <OptionDailies option={option}/>
+      <OptionDailies option={option} />
 
-        <OptionPrice option={option}/>
-      </div>
-    );
-  }
+      <OptionPrice option={option} />
+    </div>
+  );
 }
 
 Option.propTypes = {
