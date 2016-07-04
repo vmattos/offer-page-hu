@@ -2,7 +2,7 @@
   background: #eee url('./images/header-banner.jpg') center;
   background-size: cover;
   border-bottom: 1px solid #ccc;
-  min-height: 270px;
+  min-height: 200px;
 }
 
 .language-switcher {
