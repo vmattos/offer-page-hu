@@ -1,8 +1,8 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import OfferTitle from '../../components/OfferTitle/OfferTitle'
-import OfferOptions from '../../components/OfferOptions/OfferOptions'
-import OfferImages from '../../components/OfferImages/OfferImages'
+import OfferTitle from '../../components/OfferTitle/OfferTitle';
+import OfferOptions from '../../components/OfferOptions/OfferOptions';
+import OfferImages from '../../components/OfferImages/OfferImages';
 
 import styles from './OfferDetailsPage.css';
 
@@ -15,10 +15,6 @@ import { getOffer } from '../../OfferReducer';
 import { getVisibility } from '../../VisibilityReducer';
 
 class OfferDetailsPage extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentWillMount() {
     this.originLocations = this.getOriginLocations(this.props.offer);
     this.availableDailies = this.getAvailableDailies(this.props.offer);
@@ -26,19 +22,7 @@ class OfferDetailsPage extends Component {
   }
 
   componentDidMount() {
-    this.props.dispatch(fetchOffer(this.props.offer.id))
-  }
-
-  loadImages(photos) {
-    // Webpack has a that forbids us to use require inside .map() :(
-    if (typeof window !== 'undefined') {
-      const urlList = [];
-      for (let i = 0; i < photos.length; i++) {
-        urlList.push(require(`../../${photos[i]}`));
-      }
-      return urlList;
-    }
-    return [];
+    this.props.dispatch(fetchOffer(this.props.offer.id));
   }
 
   getOriginLocations(offer) {
@@ -59,16 +43,17 @@ class OfferDetailsPage extends Component {
     );
   }
 
-  filterOptionsByOrigin(options) {
-    const origin = this.props.visibility.origin.value;
-    if (!origin || origin === "") return options;
-    return options.filter((o) => o.from.indexOf(origin) != -1);
+  getUniqueItems(list) {
+    return list.reduce((p, o) => { return p.indexOf(o) === -1 ? [...p, o] : p; }, []);
   }
 
-  filterOptionsByDaily(options) {
-    const daily = this.props.visibility.daily.value;
-    if (!daily || daily === "") return options;
-    return options.filter((o) => o.daily == daily);
+  // Helper functions
+  reduceDailies(offer) {
+    return offer.options.reduce((p, o) => [...p, o.daily], []);
+  }
+
+  reduceOrigins(offer) {
+    return offer.options.reduce((p, o) => [...p, ...o.from], []);
   }
 
   handleOriginSelect(value) {
@@ -77,6 +62,30 @@ class OfferDetailsPage extends Component {
 
   handleDailySelect(value) {
     this.dispatch(setDailyFilter(value));
+  }
+
+  filterOptionsByDaily(options) {
+    const daily = this.props.visibility.daily.value;
+    if (!daily || daily === '') return options;
+    return options.filter((o) => parseInt(o.daily, 10) === daily);
+  }
+
+  filterOptionsByOrigin(options) {
+    const origin = this.props.visibility.origin.value;
+    if (!origin || origin === '') return options;
+    return options.filter((o) => parseInt(o.from.indexOf(origin), 10) !== -1);
+  }
+
+  loadImages(photos) {
+    // Webpack has a that forbids us to use require inside .map() :(
+    if (typeof window !== 'undefined') {
+      const urlList = [];
+      for (let i = 0; i < photos.length; i++) {
+        urlList.push(require(`../../${photos[i]}`)); // eslint-disable-line
+      }
+      return urlList;
+    }
+    return [];
   }
 
   render() {
@@ -106,19 +115,6 @@ class OfferDetailsPage extends Component {
       </div>
     );
   }
-
-  // Helper functions
-  reduceDailies(offer) {
-    return offer.options.reduce((p, o) => [...p, o.daily], []);
-  }
-
-  reduceOrigins(offer) {
-    return offer.options.reduce((p, o) => [...p, ...o.from], []);
-  }
-
-  getUniqueItems(list) {
-    return list.reduce((p, o) => p.indexOf(o) === -1 ? [...p, o] : p, [] );
-  }
 }
 
 // Actions required to provide data for this component to render in sever side.
@@ -137,10 +133,11 @@ function mapStateToProps(state, props) {
 OfferDetailsPage.propTypes = {
   offer: PropTypes.object,
   dispatch: PropTypes.func.isRequired,
+  visibility: PropTypes.object.isRequired,
 };
 
 OfferDetailsPage.contextTypes = {
   router: React.PropTypes.object,
-}
+};
 
 export default connect(mapStateToProps)(OfferDetailsPage);
