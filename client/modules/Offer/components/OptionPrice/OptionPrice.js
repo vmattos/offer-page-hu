@@ -3,18 +3,14 @@ import React, { PropTypes, Component } from 'react';
 import style from './OptionPrice.css';
 
 class OptionPrice extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentWillMount() {
-    this.formattedPrice = this.formatPrice(this.props.option.price)
+    this.formattedPrice = this.formatPrice(this.props.option.price);
   }
 
   formatPrice(price) {
     return price
       .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      .replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   }
 
   render() {
