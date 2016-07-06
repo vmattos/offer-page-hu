@@ -19,6 +19,7 @@ class OfferDetailsPage extends Component {
     super(props);
 
     this.handleOriginSelect = this.handleOriginSelect.bind(this);
+    this.handleDailySelect = this.handleDailySelect.bind(this);
   }
 
   componentWillMount() {
@@ -63,7 +64,7 @@ class OfferDetailsPage extends Component {
   }
 
   handleDailySelect(value) {
-    this.dispatch(setDailyFilter(value));
+    this.props.dispatch(setDailyFilter(value));
   }
 
   filterOptionsByDaily(options) {
