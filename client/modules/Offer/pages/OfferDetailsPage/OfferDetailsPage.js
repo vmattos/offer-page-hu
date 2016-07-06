@@ -15,6 +15,12 @@ import { getOffer } from '../../OfferReducer';
 import { getVisibility } from '../../VisibilityReducer';
 
 class OfferDetailsPage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleOriginSelect = this.handleOriginSelect.bind(this);
+  }
+
   componentWillMount() {
     this.originLocations = this.getOriginLocations(this.props.offer);
     this.availableDailies = this.getAvailableDailies(this.props.offer);
@@ -53,7 +59,7 @@ class OfferDetailsPage extends Component {
   }
 
   handleOriginSelect(value) {
-    this.dispatch(setOriginFilter(value));
+    this.props.dispatch(setOriginFilter(value));
   }
 
   handleDailySelect(value) {
@@ -145,3 +151,4 @@ OfferDetailsPage.contextTypes = {
 };
 
 export default connect(mapStateToProps)(OfferDetailsPage);
+
