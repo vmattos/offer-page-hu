@@ -1,5 +1,6 @@
 import test from 'ava';
 import { OfferDetailsPage } from '../../pages/OfferDetailsPage/OfferDetailsPage';
+import sinon from 'sinon';
 
 const offer = {
   "id": 0,
@@ -201,4 +202,11 @@ test('reduceOrigins should return a list of non-unique origins', t => {
     'Boa Vista',
     'Cuiabá',
   ])
+});
+
+test('handleOriginSelect should dispatch an action', t => {
+  const spy = sinon.spy();
+  let page = new OfferDetailsPage({ dispatch: spy });
+  page.handleOriginSelect('Rio de Janeiro');
+  t.true(spy.called);
 });
