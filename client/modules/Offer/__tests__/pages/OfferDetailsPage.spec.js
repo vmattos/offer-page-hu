@@ -210,3 +210,10 @@ test('handleOriginSelect should dispatch an action', t => {
   page.handleOriginSelect('Rio de Janeiro');
   t.true(spy.called);
 });
+
+test('handleDailySelect should dispatch an action', t => {
+  const spy = sinon.spy();
+  let page = new OfferDetailsPage({ dispatch: spy });
+  page.handleDailySelect('5');
+  t.true(spy.called);
+});
