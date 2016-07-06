@@ -9,16 +9,19 @@ function OptionDailies(props) {
 
   return (
     <Col
-      md={3}
-      className={style.Section}
+      xs={6}
+      md={2}
+      className={style.Column}
     >
-      <p>
-        <span className={style.Dailies}>{option.daily}</span>
-        {' '}
-        <span className={style.Description}>
-          Diária{parseInt(option.daily, 10) === 1 ? '' : 's'}
-        </span>
-      </p>
+      <div className={style.Section}>
+        <p>
+          <span className={style.Dailies}>{option.daily}</span>
+          {' '}
+          <span className={style.Description}>
+            Diária{parseInt(option.daily, 10) === 1 ? '' : 's'}
+          </span>
+        </p>
+      </div>
     </Col>
   );
 }

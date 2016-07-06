@@ -9,15 +9,20 @@ function OptionOrigins(props) {
 
   return (
     <Col
-      md={3}
-      className={style.Section}
+      xs={6}
+      md={2}
+      className={style.Column}
     >
-      <h2 className={style.Title}>Saídas:</h2>
-      {
-        option.from.map((origin) => (
-          <p key={origin} className={style.Origin}>{origin}</p>
-        ))
-      }
+      <div className={style.Section}>
+        <h2 className={style.Title}>Saídas:</h2>
+        <div className={style.Origins}>
+          {
+            option.from.map((origin) => (
+              <p key={origin} className={style.Origin}>{origin}</p>
+            ))
+          }
+        </div>
+      </div>
     </Col>
   );
 }

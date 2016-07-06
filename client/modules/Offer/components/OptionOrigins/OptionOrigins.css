@@ -1,19 +1,47 @@
-/*
- *.Section {
- *  vertical-align: top;
- *  display: table-cell;
- *  padding: 8px;
- *  width: 15%;
- *  border-right: 1px solid #ccc;
- *}
- */
+.Section {
+  margin-bottom: 25px;
+}
 
 .Title {
   font-size: 0.9em;
   margin-bottom: 8px;
+  margin-top: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.Origins {
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: middle;
 }
 
 .Origin {
   color: #666;
   font-size: 0.9em;
+}
+
+@media (width >= 768px) {
+  .Section {
+    text-align: center;
+  }
+
+  .Title {
+    display: block;
+  }
+
+  .Origins {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+@media (width >= 992px) {
+  .Column {
+    border-right: 1px solid #ccc;
+  }
+
+  .Section {
+    margin-top: 20px;
+  }
 }

@@ -1,12 +1,7 @@
-/*
- *.Section {
- *  vertical-align: top;
- *  display: table-cell;
- *  padding: 8px;
- *  width: 38%;
- *  border-right: 1px solid #ccc;
- *}
- */
+.Section {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
 
 .Title {
   font-size: 1em;
@@ -17,5 +12,21 @@
   color: #666;
   font-size: 0.9em;
   font-weight: initial;
+}
+
+@media (width >= 768px) {
+  .Section {
+    text-align: center;
+  }
+}
+
+@media (width >= 992px) {
+  .Column {
+    border-right: 1px solid #ccc;
+  }
+
+  .Section {
+    text-align: initial;
+  }
 }
 

@@ -6,3 +6,9 @@
 .Option:hover {
   border-color: orange;
 }
+
+@media (width >= 992px) {
+  .Option {
+    display: flex;
+  }
+}
