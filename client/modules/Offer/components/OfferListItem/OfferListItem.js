@@ -12,13 +12,18 @@ function OfferListItem(props) {
   return (
     <Link to={linkLocation}>
       <Col
+        sm={6}
+        md={4}
+      >
+      <div
         className={styles.offerListItem}
         data-photo={props.offer.photos[0]}
       >
-        <div className={styles.itemDescription}>
-          <h2>{props.offer.title}</h2>
-          <h3>{props.offer.location}</h3>
-          <h3 className={styles.price}>R$ {props.offer.options[0].price}</h3>
+          <div className={styles.itemDescription}>
+            <h2>{props.offer.title}</h2>
+            <h3>{props.offer.location}</h3>
+            <h3 className={styles.price}>R$ {props.offer.options[0].price}</h3>
+          </div>
         </div>
       </Col>
     </Link>
