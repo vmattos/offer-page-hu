@@ -222,3 +222,8 @@ test('filterOptionsByDaily should return a filtered list', t => {
   const filteredList = page.filterOptionsByDaily(offer.options);
   t.is(filteredList.length, 3);
 });
+
+test('filterOptionsByOrigin should return a filtered list', t => {
+  const filteredList = page.filterOptionsByOrigin(offer.options);
+  t.is(filteredList.length, 3);
+});
