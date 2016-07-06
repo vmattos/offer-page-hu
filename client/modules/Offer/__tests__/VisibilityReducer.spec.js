@@ -1,7 +1,7 @@
 import test from 'ava';
 import { reducerTest } from 'redux-ava';
 import visibilityReducer, { VisibilityReducer } from '../VisibilityReducer';
-import { setOriginFilter } from '../VisibilityActions';
+import { setOriginFilter, setDailyFilter } from '../VisibilityActions';
 
 test('action for SET_ORIGIN_FILTER is working', reducerTest(
   visibilityReducer,
@@ -15,3 +15,17 @@ test('action for SET_ORIGIN_FILTER is working', reducerTest(
     daily: ''
   },
 ));
+
+test('action for SET_DAILY_FILTER is working', reducerTest(
+  visibilityReducer,
+  {
+    origin: '',
+    daily: '',
+  },
+  setDailyFilter('5'),
+  {
+    origin: '',
+    daily: '5'
+  },
+));
+
