@@ -3,10 +3,6 @@
 }
 
 .offerListItem {
-  /*
-   *float: left;
-   *width: 100%;
-   */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -20,14 +16,12 @@
 
 @media (width >= 730px) {
   .offerListItem {
-    /*width: 45%;*/
     margin-left: 3%;
   }
 }
 
 @media (width >= 1020px) {
   .offerListItem {
-    /*width: 31%;*/
     margin-left: 2%;
   }
 }
@@ -106,12 +100,14 @@
   color: #656565;
 
   & h2 {
+    margin: 0;
     font-size: 1.1em;
     line-height: 50px;
     padding-left: 10px;
   }
 
   & h3 {
+    margin: 0;
     display: inline-block;
     font-size: 0.9em;
     opacity: 0;
