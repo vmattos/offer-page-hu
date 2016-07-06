@@ -41,9 +41,20 @@ class OfferDetailsPage extends Component {
   }
 
   getVisibleOptions(offer) {
-    return this.filterOptionsByDaily(
+    return this.orderOptions(
+      this.filterOptionsByDaily(
       this.filterOptionsByOrigin(offer.options)
-    );
+    ));
+  }
+
+  orderOptions(options) {
+    const optionsClone = [...options]
+    optionsClone.sort(function sortByPrice(a, b) {
+      if (a.price > b.price) return 1;
+      if (a.price < b.price) return -1;
+      return 0;
+    });
+    return optionsClone;
   }
 
   getUniqueItems(list) {
