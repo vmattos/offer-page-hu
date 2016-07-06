@@ -21,8 +21,17 @@ class OptionsHeader extends Component {
   render() {
     return (
       <Row className={style.Header}>
-        <h1 className={style.Title}>Escolha sua melhor opção</h1>
-        <Col className={style.OriginSelector}>
+        <Col
+          xs={12}
+          sm={6}
+        >
+          <h1 className={style.Title}>Escolha sua melhor opção</h1>
+        </Col>
+        <Col
+          xs={12}
+          sm={3}
+          className={style.OriginSelector}
+        >
           <p>Saídas:</p>
           <Select
             className={style.Select}
@@ -32,7 +41,11 @@ class OptionsHeader extends Component {
             onChange={this.props.handleOriginSelect}
           />
         </Col>
-        <Col className={style.DailySelector}>
+        <Col
+          xs={12}
+          sm={3}
+          className={style.DailySelector}
+        >
           <p>Nº de diárias::</p>
           <Select
             className={style.Select}
