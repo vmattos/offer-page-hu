@@ -217,3 +217,8 @@ test('handleDailySelect should dispatch an action', t => {
   page.handleDailySelect('5');
   t.true(spy.called);
 });
+
+test('filterOptionsByDaily should return a filtered list', t => {
+  const filteredList = page.filterOptionsByDaily(offer.options);
+  t.is(filteredList.length, 3);
+});
