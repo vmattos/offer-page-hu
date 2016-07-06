@@ -63,6 +63,7 @@ const renderFullPage = (html, initialState) => {
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" href="https://npmcdn.com/react-select/dist/react-select.css">
         <link rel="stylesheet" href="https://npmcdn.com/react-image-gallery@0.6.4/build/image-gallery.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
         <link rel="shortcut icon" href="http://cmastatic.hotelurbano.com/icons/favicon.ico" type="image/png" />
       </head>
       <body>
