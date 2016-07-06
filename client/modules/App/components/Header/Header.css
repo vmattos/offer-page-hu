@@ -22,3 +22,16 @@
   overflow: auto;
   text-indent: -9999px;
 }
+
+@media (width <= 606px) {
+  .header {
+    min-height: 0;
+    height: 200px;
+  }
+}
+
+@media (width <= 400px) {
+  .header {
+    height: 155px;
+  }
+}
