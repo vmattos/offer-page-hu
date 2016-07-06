@@ -7,6 +7,6 @@ import OfferListPage from '../../pages/OfferListPage/OfferListPage';
 const store = configureStore();
 
 test('has correct props', t => {
-  const wrapper = shallow(<OfferListPage store={store} />)
+  const wrapper = shallow(<OfferListPage store={store} />);
   t.truthy(wrapper.props().offers);
 });

@@ -15,8 +15,8 @@ test('should return the correct type for setOriginFilter', actionTest(
 ));
 
 test('should return the correct type for setDailyFilter', actionTest(
-  setOriginFilter,
+  setDailyFilter,
   '5',
-  { type: SET_ORIGIN_FILTER, filter: '5' }
+  { type: SET_DAILY_FILTER, filter: '5' }
 ));
 

@@ -12,7 +12,7 @@ test('action for SET_ORIGIN_FILTER is working', reducerTest(
   setOriginFilter('Rio de Janeiro'),
   {
     origin: 'Rio de Janeiro',
-    daily: ''
+    daily: '',
   },
 ));
 
@@ -25,7 +25,7 @@ test('action for SET_DAILY_FILTER is working', reducerTest(
   setDailyFilter('5'),
   {
     origin: '',
-    daily: '5'
+    daily: '5',
   },
 ));
 
@@ -35,7 +35,7 @@ test('getVisibility selector', t => {
       visibility: {
         origin: 'Rio de Janeiro',
         daily: '5',
-      }
+      },
     }),
     {
       origin: 'Rio de Janeiro',

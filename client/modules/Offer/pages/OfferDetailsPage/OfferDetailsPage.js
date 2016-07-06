@@ -164,4 +164,4 @@ OfferDetailsPage.contextTypes = {
 
 export default connect(mapStateToProps)(OfferDetailsPage);
 
-export { OfferDetailsPage }
+export { OfferDetailsPage };

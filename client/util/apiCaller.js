@@ -1,13 +1,13 @@
 import fetch from 'isomorphic-fetch';
 import Config from '../../server/config';
 
-export const API_URL = (function() {
+export const API_URL = (function getApiUrl() { // eslint-disable-line
   const isServer = typeof window === 'undefined';
   const isTest = process.env.NODE_ENV === 'test';
   if (isServer || isTest) {
     return process.env.BASE_URL || (`http://localhost:${process.env.PORT || Config.port}/api`);
   }
-  return '/api'
+  return '/api';
 })();
 
 export default function callApi(endpoint, method = 'get', body) {
