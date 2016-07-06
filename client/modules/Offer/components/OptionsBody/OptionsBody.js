@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 import Option from '../Option/Option';
 
-function OptionsBody(props){
+function OptionsBody(props) {
   const { visibleOptions } = props;
   return (
     <div>

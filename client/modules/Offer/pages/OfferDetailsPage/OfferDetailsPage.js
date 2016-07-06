@@ -47,9 +47,14 @@ class OfferDetailsPage extends Component {
     ));
   }
 
+  getUniqueItems(list) {
+    return list.reduce((p, o) => { return p.indexOf(o) === -1 ? [...p, o] : p; }, []);
+  }
+
+  // Helper functions
   orderOptions(options) {
-    const optionsClone = [...options]
-    optionsClone.sort(function sortByPrice(a, b) {
+    const optionsClone = [...options];
+    optionsClone.sort((a, b) => {
       if (a.price > b.price) return 1;
       if (a.price < b.price) return -1;
       return 0;
@@ -57,11 +62,6 @@ class OfferDetailsPage extends Component {
     return optionsClone;
   }
 
-  getUniqueItems(list) {
-    return list.reduce((p, o) => { return p.indexOf(o) === -1 ? [...p, o] : p; }, []);
-  }
-
-  // Helper functions
   reduceDailies(offer) {
     return offer.options.reduce((p, o) => [...p, o.daily], []);
   }
@@ -83,8 +83,8 @@ class OfferDetailsPage extends Component {
       const daily = this.props.visibility.daily.value;
       if (!daily || daily === '') return options;
       return options.filter((o) => parseInt(o.daily, 10) === daily);
-    } catch(e) {
-      return options
+    } catch (e) {
+      return options;
     }
   }
 
@@ -93,7 +93,7 @@ class OfferDetailsPage extends Component {
       const origin = this.props.visibility.origin.value;
       if (!origin || origin === '') return options;
       return options.filter((o) => parseInt(o.from.indexOf(origin), 10) !== -1);
-    } catch(e) {
+    } catch (e) {
       return options;
     }
   }

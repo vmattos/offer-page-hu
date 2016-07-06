@@ -28,7 +28,6 @@ class OptionsHeader extends Component {
             value={this.props.visibility.origin}
             dispatch={this.props.dispatch}
             onChange={this.props.handleOriginSelect}
-            clearable={true}
           />
         </div>
         <div className={style.DailySelector}>
