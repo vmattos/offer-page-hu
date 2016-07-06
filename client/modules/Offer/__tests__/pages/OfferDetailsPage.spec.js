@@ -173,3 +173,8 @@ test('orderOptions should return an ordered list', t => {
   t.is(orderedOptions[7].price, 5380);
   t.is(orderedOptions[8].price, 5549);
 });
+
+test('reduceDailies should return a list of non-unique available dailies', t => {
+  const dailies = page.reduceDailies(offer);
+  t.deepEqual(dailies, [5,5,5,8,12,12,8,8,12]);
+});
