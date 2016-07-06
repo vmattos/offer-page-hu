@@ -4,7 +4,7 @@ import Option from '../Option/Option';
 
 class OptionsBody extends Component{
   componentWillMount() {
-    this.props.offer.options = this.orderOptions(this.props.offer.options);
+    this.visibleOptions = this.orderOptions(this.props.visibleOptions);
   }
 
   orderOptions(options) {
@@ -18,11 +18,10 @@ class OptionsBody extends Component{
   }
 
   render() {
-    const { visibleOptions } = this.props;
     return (
       <div>
         {
-          visibleOptions.map((option) => (
+          this.visibleOptions.map((option) => (
             <Option key={option.id} option={option} />
           ))
         }
