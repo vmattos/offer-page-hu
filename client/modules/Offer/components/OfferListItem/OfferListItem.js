@@ -15,10 +15,10 @@ function OfferListItem(props) {
         sm={6}
         md={4}
       >
-      <div
-        className={styles.offerListItem}
-        data-photo={props.offer.photos[0]}
-      >
+        <div
+          className={styles.offerListItem}
+          data-photo={props.offer.photos[0]}
+        >
           <div className={styles.itemDescription}>
             <h2>{props.offer.title}</h2>
             <h3>{props.offer.location}</h3>
