@@ -21,10 +21,6 @@ class OfferDetailsPage extends Component {
     this.images = this.loadImages(this.props.offer.photos);
   }
 
-  componentDidMount() {
-    this.props.dispatch(fetchOffer(this.props.offer.id));
-  }
-
   getOriginLocations(offer) {
     return this.getUniqueItems(
       this.reduceOrigins(offer)
