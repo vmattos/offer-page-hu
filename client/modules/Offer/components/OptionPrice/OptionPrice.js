@@ -1,5 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 
+import { Col } from 'react-bootstrap';
+
 import style from './OptionPrice.css';
 
 class OptionPrice extends Component {
@@ -15,19 +17,23 @@ class OptionPrice extends Component {
 
   render() {
     return (
-      <div className={style.Section}>
-        <p>
-          Por apenas:
-          {' '}
-          <span>
-            R$ <span className={style.Price}>{this.formattedPrice}</span>
-          </span>
-          {' '}
-          + taxas em até 10x
-        </p>
-
-        <button className={style.Confirm}>Quero ir</button>
-      </div>
+      <Col
+        xs={12}
+        md={2}
+      >
+        <div className={style.Section}>
+          <p>
+            Por apenas:
+            {' '}
+            <span className={style.PriceTag}>
+              R$ <span className={style.Value}>{this.formattedPrice}</span>
+            </span>
+            {' '}
+            + taxas em até 10x
+          </p>
+          <button className={style.Confirm}>Quero ir</button>
+        </div>
+      </Col>
     );
   }
 }

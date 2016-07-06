@@ -2,9 +2,9 @@
   --color-gray: #666;
   --color-light-gray: #ccc;
 
-  --selector: {
-    width: 30%;
+  --md-selector: {
     display: inline-block;
+    margin-left: 10px;
   }
 }
 
@@ -14,44 +14,40 @@
 
   & .Title {
     text-transform: uppercase;
-    display: inline-block;
     font-size: 1.2em;
-    width: 40%;
   }
 
   & .OriginSelector {
-    @apply --selector;
-
-    & .Select {
-      width: 70%
-    }
-  }
-
-  & .DailySelector {
-    @apply --selector;
-
-    & .Select {
-      width: 50%
-    }
+    margin-bottom: 30px;
   }
 
   & p {
     text-transform: uppercase;
     font-size: 0.6em;
-    display: inline-block;
     color: var(--color-gray);
   }
 }
 
-.Select {
-  margin-left: 3px;
-  display: inline-block;
-}
-/*
- *
- *.Select div {
- *  height: 19px;
- *  line-height: 26px;
- *}
- */
+@media (width >= 992px) {
+  .Header {
+    & .OriginSelector {
+      margin-bottom: 0;
 
+      & .Select {
+        @apply --md-selector;
+        width: 70%;
+      }
+    }
+
+    & .DailySelector {
+      & .Select {
+        @apply --md-selector;
+        width: 50%;
+      }
+    }
+
+    & p {
+      display: inline-block;
+    }
+  }
+}

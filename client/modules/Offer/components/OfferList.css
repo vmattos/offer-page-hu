@@ -5,16 +5,6 @@
 
 .offerList {
   width: 100%;
-}
-
-@media (width >= 730px) {
-  .title {
-    margin-left: 3%;
-  }
-}
-
-@media (width >= 1020px) {
-  .title {
-    margin-left: 2%;
-  }
+  margin-right: auto;
+  margin-left: auto;
 }
