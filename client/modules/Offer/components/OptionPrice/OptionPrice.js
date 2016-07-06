@@ -1,5 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 
+import { Col } from 'react-bootstrap';
+
 import style from './OptionPrice.css';
 
 class OptionPrice extends Component {
@@ -15,7 +17,10 @@ class OptionPrice extends Component {
 
   render() {
     return (
-      <div className={style.Section}>
+      <Col
+        md={3}
+        className={style.Section}
+      >
         <p>
           Por apenas:
           {' '}
@@ -27,7 +32,7 @@ class OptionPrice extends Component {
         </p>
 
         <button className={style.Confirm}>Quero ir</button>
-      </div>
+      </Col>
     );
   }
 }

@@ -1,6 +1,8 @@
 import React, { PropTypes, Component } from 'react';
 import Select from 'react-select';
 
+import { Row, Col } from 'react-bootstrap';
+
 import style from './OptionsHeader.css';
 
 class OptionsHeader extends Component {
@@ -18,9 +20,9 @@ class OptionsHeader extends Component {
 
   render() {
     return (
-      <div className={style.Header}>
+      <Row className={style.Header}>
         <h1 className={style.Title}>Escolha sua melhor opção</h1>
-        <div className={style.OriginSelector}>
+        <Col className={style.OriginSelector}>
           <p>Saídas:</p>
           <Select
             className={style.Select}
@@ -29,8 +31,8 @@ class OptionsHeader extends Component {
             dispatch={this.props.dispatch}
             onChange={this.props.handleOriginSelect}
           />
-        </div>
-        <div className={style.DailySelector}>
+        </Col>
+        <Col className={style.DailySelector}>
           <p>Nº de diárias::</p>
           <Select
             className={style.Select}
@@ -39,8 +41,8 @@ class OptionsHeader extends Component {
             dispatch={this.props.dispatch}
             onChange={this.props.handleDailySelect}
           />
-        </div>
-      </div>
+        </Col>
+      </Row>
     );
   }
 }
