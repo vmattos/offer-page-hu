@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 
 import { Col } from 'react-bootstrap';
+import { FormattedMessage } from 'react-intl';
 
 import style from './OptionPrice.css';
 
@@ -23,15 +24,19 @@ class OptionPrice extends Component {
       >
         <div className={style.Section}>
           <p>
-            Por apenas:
+            <FormattedMessage id="option.price.head" />
             {' '}
             <span className={style.PriceTag}>
-              R$ <span className={style.Value}>{this.formattedPrice}</span>
+              <FormattedMessage id="option.price.monetaryUnit" />
+              {' '}
+              <span className={style.Value}>{this.formattedPrice}</span>
             </span>
             {' '}
-            + taxas em até 10x
+            <FormattedMessage id="option.price.taxes" />
           </p>
-          <button className={style.Confirm}>Quero ir</button>
+          <button className={style.Confirm}>
+            <FormattedMessage id="option.price.confirm" />
+          </button>
         </div>
       </Col>
     );

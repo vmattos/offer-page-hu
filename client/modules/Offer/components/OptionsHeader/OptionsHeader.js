@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import Select from 'react-select';
 
 import { Row, Col } from 'react-bootstrap';
+import { FormattedMessage } from 'react-intl';
 
 import style from './OptionsHeader.css';
 
@@ -25,14 +26,18 @@ class OptionsHeader extends Component {
           xs={12}
           sm={6}
         >
-          <h1 className={style.Title}>Escolha sua melhor opção</h1>
+          <h1 className={style.Title}>
+            <FormattedMessage id="option.header.title" />
+          </h1>
         </Col>
         <Col
           xs={12}
           sm={3}
           className={style.OriginSelector}
         >
-          <p>Saídas:</p>
+          <p>
+            <FormattedMessage id="option.header.origins" />
+          </p>
           <Select
             className={style.Select}
             options={this.originsSelectOptions}
@@ -46,7 +51,9 @@ class OptionsHeader extends Component {
           sm={3}
           className={style.DailySelector}
         >
-          <p>Nº de diárias::</p>
+          <p>
+            <FormattedMessage id="option.header.dailies" />
+          </p>
           <Select
             className={style.Select}
             options={this.dailiesSelectOptions}

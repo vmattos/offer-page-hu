@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import { Col } from 'react-bootstrap';
+import { FormattedMessage } from 'react-intl';
 
 import style from './OptionOrigins.css';
 
@@ -14,7 +15,9 @@ function OptionOrigins(props) {
       className={style.Column}
     >
       <div className={style.Section}>
-        <h2 className={style.Title}>Saídas:</h2>
+        <h2 className={style.Title}>
+          <FormattedMessage id="option.origins.origins" />
+        </h2>
         <div className={style.Origins}>
           {
             option.from.map((origin) => (
