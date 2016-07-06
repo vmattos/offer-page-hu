@@ -119,7 +119,16 @@ const offer = {
   ]
 }
 
-const page = new OfferDetailsPage();
+const page = new OfferDetailsPage({
+  visibility: {
+    daily: {
+      value: 5
+    },
+    origin: {
+      value: 'Rio de Janeiro'
+    },
+  },
+});
 
 test('getOriginLocations should return unique items', t => {
   const locations = page.getOriginLocations(offer)
@@ -141,3 +150,9 @@ test('getAvailableDailies should return unique items', t => {
   const dailies = page.getAvailableDailies(offer);
   t.deepEqual(dailies, [5,8,12])
 });
+
+test('getVisibleOptions', t => {
+  const visibleOptions = page.getVisibleOptions(offer);
+  t.is(visibleOptions.length, 1);
+});
+
