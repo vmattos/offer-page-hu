@@ -161,3 +161,15 @@ test('getUniqueItems should return unique items', t => {
   t.deepEqual(uniqueItems, [1,2,3]);
 });
 
+test('orderOptions should return an ordered list', t => {
+  const orderedOptions = page.orderOptions(offer.options);
+  t.is(orderedOptions[0].price, 2380);
+  t.is(orderedOptions[1].price, 2549);
+  t.is(orderedOptions[2].price, 2620);
+  t.is(orderedOptions[3].price, 3380);
+  t.is(orderedOptions[4].price, 3549);
+  t.is(orderedOptions[5].price, 3720);
+  t.is(orderedOptions[6].price, 5120);
+  t.is(orderedOptions[7].price, 5380);
+  t.is(orderedOptions[8].price, 5549);
+});
