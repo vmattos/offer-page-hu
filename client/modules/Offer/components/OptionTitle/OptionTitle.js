@@ -10,9 +10,10 @@ function OptionTitle(props) {
   return (
     <Col
       md={3}
-      className={style.Section}>
-        <h2 className={style.Title}>{option.title}</h2>
-        <h3 className={style.Description}>{option.description}</h3>
+      className={style.Section}
+    >
+      <h2 className={style.Title}>{option.title}</h2>
+      <h3 className={style.Description}>{option.description}</h3>
     </Col>
   );
 }

@@ -8,15 +8,16 @@ function OptionOrigins(props) {
   const option = props.option;
 
   return (
-    <Col 
+    <Col
       md={3}
-      className={style.Section}>
-        <h2 className={style.Title}>Saídas:</h2>
-        {
-          option.from.map((origin) => (
-            <p key={origin} className={style.Origin}>{origin}</p>
-          ))
-        }
+      className={style.Section}
+    >
+      <h2 className={style.Title}>Saídas:</h2>
+      {
+        option.from.map((origin) => (
+          <p key={origin} className={style.Origin}>{origin}</p>
+        ))
+      }
     </Col>
   );
 }

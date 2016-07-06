@@ -19,18 +19,19 @@ class OptionPrice extends Component {
     return (
       <Col
         md={3}
-        className={style.Section}>
-          <p>
-            Por apenas:
-            {' '}
-            <span>
-              R$ <span className={style.Price}>{this.formattedPrice}</span>
-            </span>
-            {' '}
-            + taxas em até 10x
-          </p>
+        className={style.Section}
+      >
+        <p>
+          Por apenas:
+          {' '}
+          <span>
+            R$ <span className={style.Price}>{this.formattedPrice}</span>
+          </span>
+          {' '}
+          + taxas em até 10x
+        </p>
 
-          <button className={style.Confirm}>Quero ir</button>
+        <button className={style.Confirm}>Quero ir</button>
       </Col>
     );
   }

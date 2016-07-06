@@ -13,13 +13,13 @@ function Option(props) {
   const option = props.option;
   return (
     <Row className={style.Option}>
-        <OptionTitle option={option} />
+      <OptionTitle option={option} />
 
-        <OptionOrigins option={option} />
+      <OptionOrigins option={option} />
 
-        <OptionDailies option={option} />
+      <OptionDailies option={option} />
 
-        <OptionPrice option={option} />
+      <OptionPrice option={option} />
     </Row>
   );
 }

@@ -8,16 +8,17 @@ function OptionDailies(props) {
   const option = props.option;
 
   return (
-    <Col 
+    <Col
       md={3}
-      className={style.Section}>
-        <p>
-          <span className={style.Dailies}>{option.daily}</span>
-          {' '}
-          <span className={style.Description}>
-            Diária{parseInt(option.daily, 10) === 1 ? '' : 's'}
-          </span>
-        </p>
+      className={style.Section}
+    >
+      <p>
+        <span className={style.Dailies}>{option.daily}</span>
+        {' '}
+        <span className={style.Description}>
+          Diária{parseInt(option.daily, 10) === 1 ? '' : 's'}
+        </span>
+      </p>
     </Col>
   );
 }
