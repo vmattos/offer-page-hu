@@ -119,8 +119,9 @@ const offer = {
   ]
 }
 
+const page = new OfferDetailsPage();
+
 test('getOriginLocations should return unique items', t => {
-  const page = new OfferDetailsPage();
   const locations = page.getOriginLocations(offer)
   t.deepEqual(locations, [
     'Brasilia',
@@ -134,4 +135,9 @@ test('getOriginLocations should return unique items', t => {
     'Boa Vista',
     'Cuiabá',
   ])
+});
+
+test('getAvailableDailies should return unique items', t => {
+  const dailies = page.getAvailableDailies(offer);
+  t.deepEqual(dailies, [5,8,12])
 });
