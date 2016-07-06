@@ -10,7 +10,6 @@ import config from '../webpack.config.dev';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 
-// Initialize the Express App
 const app = new Express();
 
 // Run Webpack dev server in development mode
@@ -34,7 +33,6 @@ import { fetchComponentData } from './util/fetchData';
 import offers from './routes/offer.routes';
 import serverConfig from './config';
 
-// Apply body Parser and server public assets and routes
 app.use(compression());
 app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
@@ -45,7 +43,6 @@ app.use('/api', offers);
 const renderFullPage = (html, initialState) => {
   const head = Helmet.rewind();
 
-  // Import Manifests
   const assetsManifest = process.env.webpackAssets && JSON.parse(process.env.webpackAssets);
   const chunkManifest = process.env.webpackChunkAssets && JSON.parse(process.env.webpackChunkAssets);
 
@@ -58,7 +55,6 @@ const renderFullPage = (html, initialState) => {
         ${head.meta.toString()}
         ${head.link.toString()}
         ${head.script.toString()}
-
         ${process.env.NODE_ENV === 'production' ? `<link rel='stylesheet' href='${assetsManifest['/app.css']}' />` : ''}
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" href="https://npmcdn.com/react-select/dist/react-select.css">
