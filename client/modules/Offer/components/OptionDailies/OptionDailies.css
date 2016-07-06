@@ -1,15 +1,17 @@
-.Section {
-  vertical-align: top;
-  display: table-cell;
-  padding: 8px;
-  width: 15%;
-  border-right: 1px solid #ccc;
-
-  & span {
-    display: block;
-    text-align: center;
-  }
-}
+/*
+ *.Section {
+ *  vertical-align: top;
+ *  display: table-cell;
+ *  padding: 8px;
+ *  width: 15%;
+ *  border-right: 1px solid #ccc;
+ *
+ *  & span {
+ *    display: block;
+ *    text-align: center;
+ *  }
+ *}
+ */
 
 .Dailies {
   font-size: 1.4em;
