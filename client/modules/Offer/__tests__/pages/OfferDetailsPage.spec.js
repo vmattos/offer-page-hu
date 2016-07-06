@@ -178,3 +178,27 @@ test('reduceDailies should return a list of non-unique available dailies', t => 
   const dailies = page.reduceDailies(offer);
   t.deepEqual(dailies, [5,5,5,8,12,12,8,8,12]);
 });
+
+test('reduceOrigins should return a list of non-unique origins', t => {
+  const origins = page.reduceOrigins(offer);
+  t.deepEqual(origins, [
+    'Brasilia',
+    'Campo Grande',
+    'Manaus',
+    'Belém',
+    'Rio de Janeiro',
+    'Manaus',
+    'Rio de Janeiro',
+    'Brasilia',
+    'Salvador',
+    'Campo Grande',
+    'Rio de Janeiro',
+    'São Paulo',
+    'Brasilia',
+    'Manaus',
+    'Salvador',
+    'Ilhéus',
+    'Boa Vista',
+    'Cuiabá',
+  ])
+});
