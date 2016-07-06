@@ -156,3 +156,7 @@ test('getVisibleOptions', t => {
   t.is(visibleOptions.length, 1);
 });
 
+test('getUniqueItems', t => {
+  const uniqueItems = page.getUniqueItems([1,1,2,2,3,3]);
+  t.deepEqual(uniqueItems, [1,2,3]);
+});
