@@ -13,7 +13,7 @@ function OfferList(props) {
       <div className={styles.offerList}>
         {
           props.offers.map(offer => (
-            <OfferListItem offer={offer} />
+            <OfferListItem key={offer.id} offer={offer} />
           ))
         }
       </div>
