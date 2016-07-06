@@ -14,18 +14,6 @@
   color: #656565;
 }
 
-@media (width >= 730px) {
-  .offerListItem {
-    margin-left: 3%;
-  }
-}
-
-@media (width >= 1020px) {
-  .offerListItem {
-    margin-left: 2%;
-  }
-}
-
 .offerListItem:hover {
   background-position: center -40px;
   transition: var(--transition-time);
