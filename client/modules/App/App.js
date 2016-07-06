@@ -29,7 +29,7 @@ export class App extends Component {
         {this.state.isMounted && !window.devToolsExtension && process.env.NODE_ENV === 'development' && <DevTools />}
         <div>
           <Helmet
-            title="Promocoes"
+            title="Promoções"
             titleTemplate="%s | Hotel Urbano"
             meta={[
               { charset: 'utf-8' },
