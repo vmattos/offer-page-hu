@@ -2,6 +2,8 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
 // Import Style
+import { Col } from 'react-bootstrap';
+
 import styles from './OfferListItem.css';
 
 function OfferListItem(props) {
@@ -9,7 +11,7 @@ function OfferListItem(props) {
 
   return (
     <Link to={linkLocation}>
-      <div
+      <Col
         className={styles.offerListItem}
         data-photo={props.offer.photos[0]}
       >
@@ -18,7 +20,7 @@ function OfferListItem(props) {
           <h3>{props.offer.location}</h3>
           <h3 className={styles.price}>R$ {props.offer.options[0].price}</h3>
         </div>
-      </div>
+      </Col>
     </Link>
   );
 }
