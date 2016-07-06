@@ -151,12 +151,13 @@ test('getAvailableDailies should return unique items', t => {
   t.deepEqual(dailies, [5,8,12])
 });
 
-test('getVisibleOptions', t => {
+test('getVisibleOptions should return unique visibleOptions', t => {
   const visibleOptions = page.getVisibleOptions(offer);
   t.is(visibleOptions.length, 1);
 });
 
-test('getUniqueItems', t => {
+test('getUniqueItems should return unique items', t => {
   const uniqueItems = page.getUniqueItems([1,1,2,2,3,3]);
   t.deepEqual(uniqueItems, [1,2,3]);
 });
+
