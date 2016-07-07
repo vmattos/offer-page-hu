@@ -1,5 +1,5 @@
-offer-page-hu
-=============
+offer-page-hu [![Build Status](https://travis-ci.org/vmattos/offer-page-hu.svg?branch=master)](https://travis-ci.org/vmattos/offer-page-hu)
+==============
 
 Utilize os seguintes comandos para rodar o projeto:
 
