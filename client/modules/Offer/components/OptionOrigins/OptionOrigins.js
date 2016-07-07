@@ -6,7 +6,7 @@ import { FormattedMessage } from 'react-intl';
 import style from './OptionOrigins.css';
 
 function OptionOrigins(props) {
-  const option = props.option;
+  const { option } = props;
 
   return (
     <Col

@@ -24,7 +24,7 @@ class OptionDailies extends Component {
   }
 
   render() {
-    const option = this.props.option;
+    const  { option }= this.props;
 
     return (
       <Col

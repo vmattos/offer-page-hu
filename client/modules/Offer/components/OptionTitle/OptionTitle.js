@@ -5,7 +5,7 @@ import { Col } from 'react-bootstrap';
 import style from './OptionTitle.css';
 
 function OptionTitle(props) {
-  const option = props.option;
+  const { option } = props;
 
   return (
     <Col

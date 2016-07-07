@@ -111,7 +111,7 @@ class OfferDetailsPage extends Component {
   }
 
   render() {
-    const offer = this.props.offer;
+    const { offer } = this.props;
     return (
       <div className={styles.container}>
         <OfferTitle
