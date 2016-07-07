@@ -7,7 +7,7 @@ import routes from './routes';
 
 require('./main.css');
 
-export default function App(props) {
+export default function AppWrapper(props) {
   return (
     <Provider store={props.store}>
       <IntlWrapper>
@@ -19,6 +19,6 @@ export default function App(props) {
   );
 }
 
-App.propTypes = {
+AppWrapper.propTypes = {
   store: React.PropTypes.object.isRequired,
 };
