@@ -22,6 +22,6 @@ test('should return the correct type for addOffers', actionTest(
 test('should return the correct type for addOffer', actionTest(
   addOffer,
   offer,
-  { type: ADD_OFFER, offer: offer },
+  { type: ADD_OFFER, offer },
 ));
 

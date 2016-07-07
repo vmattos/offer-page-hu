@@ -6,7 +6,7 @@ import OptionsHeader from '../../components/OptionsHeader/OptionsHeader';
 import OptionsBody from '../../components/OptionsBody/OptionsBody';
 
 const offer = {
-  id: 1
+  id: 1,
 };
 
 const originLocations = [
