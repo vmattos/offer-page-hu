@@ -15,7 +15,7 @@ class OptionDailies extends Component {
     const single = parseInt(daily, 10) === 1;
     if (single) {
       return (
-        <FormattedMessage id="option.dailes.singleDay" />
+        <FormattedMessage id="option.dailies.singleDay" />
       );
     }
     return (

@@ -1,7 +1,12 @@
 import test from 'ava';
 import { actionTest } from 'redux-ava';
 
-import { ADD_OFFERS, addOffers } from '../OfferActions';
+import {
+  ADD_OFFERS,
+  ADD_OFFER,
+  addOffers,
+  addOffer,
+} from '../OfferActions';
 
 const offer = {
   id: 0,
@@ -13,3 +18,10 @@ test('should return the correct type for addOffers', actionTest(
   [offer],
   { type: ADD_OFFERS, offers: [offer] },
 ));
+
+test('should return the correct type for addOffer', actionTest(
+  addOffer,
+  offer,
+  { type: ADD_OFFER, offer: offer },
+));
+
